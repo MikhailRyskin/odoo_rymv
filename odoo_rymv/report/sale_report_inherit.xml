@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="report_saleorder_inherit" inherit_id="sale.report_saleorder_document">
+			<xpath expr="//div[hasclass('col-auto', 'col-3', 'mw-100', 'mb-2')]" position="before">
+				<div t-if="doc.test" class="col-auto col-3 mw-100 mb-2">
+                    <strong>Test:</strong>
+                    <p class="m-0" t-field="doc.test"/>
+                </div>
+			</xpath>
+		</template>
+	</data>
+</odoo>
